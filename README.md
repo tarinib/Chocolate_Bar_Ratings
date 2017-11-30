@@ -12,6 +12,12 @@ This dataset has been released under [CCO:Public Domain](https://creativecommons
 However, signing in into kaggle.com is required to be able to download the dataset. Hence, a copy of the dataset has been provided in the ```data``` directory.			
 #### OBJECTIVE
 
+Using this dataset, I will try to answer these questions:
+
+* Is there a relationship between Cocoa percentage and Rating of chocolates?
+* Which region produces the best chocolates?
+* Does Bean type effect Rating of chocolates?
+* Where are the beans of highest rated chocolate bars grown?
 
 
 
