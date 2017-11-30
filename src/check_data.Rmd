@@ -1,0 +1,15 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
+read_csv("data/flavors_of_cacao.csv") %>% 
+  head() 
+```
+
