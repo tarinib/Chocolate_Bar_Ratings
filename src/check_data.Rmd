@@ -9,7 +9,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r, warning=FALSE, message=FALSE}
 library(tidyverse)
-read_csv("data/flavors_of_cacao.csv") %>% 
+read_csv(url("https://raw.githubusercontent.com/tarinib/Chocolate_Bar_Ratings/master/data/flavors_of_cacao.csv")) %>% 
   head() 
+```
+
+```{r}
+
 ```
 
