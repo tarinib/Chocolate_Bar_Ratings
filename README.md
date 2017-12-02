@@ -10,14 +10,14 @@ Date created: November 30th, 2017
 
 There is nothing better than the smooth texture and rich taste of a piece of chocolate. Almost everyone is a huge fan of this delicacy made out of Theobroma cacao seeds, roasted and ground. 
 However, not all chocolates are same!
-This dataset contains expert ratings of over 1,700 individual chocolate bars, along with information on their regional origin, percentage of cocoa, the variety of chocolate bean used and where the beans were grown (kaggle.com).
+This dataset contains expert ratings of over 1,700 individual chocolate bars, along with information on their regional origin, percentage of cocoa, the variety of chocolate bean used and where the beans were grown.
 
 ## Data
 
 Data source: [https://www.kaggle.com/rtatman/chocolate-bar-ratings](https://www.kaggle.com/rtatman/chocolate-bar-ratings).
 This dataset has been released under [CCO:Public Domain](https://creativecommons.org/publicdomain/zero/1.0/)
 
-However, signing in into kaggle.com is required to be able to download the dataset. Hence, a copy of the dataset has been provided in the ```data``` directory.	
+However, a kaggle account is required in order to download this dataset. Hence, a copy of the dataset has been provided in the ```data``` directory.	
 
 **Column metadata:**
 
@@ -43,9 +43,9 @@ However, signing in into kaggle.com is required to be able to download the datas
 
 **Exploratory analysis**
 
-Since, I have recently learned the limitless possibilities of data anaylsis and visualization in R, I perform an exploratory analysis of this dataset. 
+Since I have recently learned the limitless possibilities of data anaylsis and visualization in R, I am going to perform an exploratory analysis of this dataset. 
 
-Hypothesis: I think the highest rated chocloates have the highest percentage of Cocoa and come mainly from Central and South America.
+Hypothesis: Best rated chocloates have the highest percentage of Cocoa and come mainly from Central and South America.
 
 Testing this hypothesis will include investigating the following questions: 
 
@@ -56,11 +56,11 @@ Testing this hypothesis will include investigating the following questions:
 
 ## Suggested analysis
 
-I will begin by plotting a worldmap visualizing the distribution of origin of beans. According to flavor ratings, a rating of 4 or 5 places the chocolate in the 'elite' or 'premium' category. Hence, color coding the above scatter plot might help in identifying the regions producing the highets rated chocolates.
+I will begin by plotting a worldmap visualizing the distribution of origin of beans. According to flavor ratings, a rating of 4 or 5 places the chocolate in 'elite' or 'premium' category. Hence, color coding the above scatter plot might help in identifying the regions producing the highets rated chocolates.
 
 The relationship between Cocoa percentage and Rating of chocolates can be explored through correlation function and fitting a line through the data points. 
 
-Visualizaing types of beans, rating of chocolates using box plots, jitter plots among others with varied aesthetics can narrow down regions producing the best quality chocolates.
+Visualizing the types of beans, rating of chocolates using box plots, jitter plots among others with varied aesthetics can narrow down regions producing the best quality chocolates.
 
 I will also look at review date and chocolate ratings to see how ratings have varied over time.
 
