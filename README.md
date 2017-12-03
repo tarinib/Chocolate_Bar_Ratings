@@ -12,9 +12,6 @@ There is nothing better than the smooth texture and rich taste of a piece of cho
 However, not all chocolates are same!
 This dataset contains expert ratings of over 1,700 individual chocolate bars, along with information on their regional origin, percentage of cocoa, the variety of chocolate bean used and where the beans were grown.
 
-![](/Users/Tarini/Documents/Chocolate_Bar_Ratings/doc/Cocoa-Beans-Chocolate.jpg)
-*Image: exportersindia.com*
-
 ## Data
 
 Data source: [https://www.kaggle.com/rtatman/chocolate-bar-ratings](https://www.kaggle.com/rtatman/chocolate-bar-ratings).
