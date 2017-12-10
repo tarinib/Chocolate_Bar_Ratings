@@ -1,0 +1,7 @@
+"Company__(Maker-if_known)","Specific_Bean_Origin_or_Bar_Name","     REF"," Review_Date","Cocoa_Percent","Company_Location","    Rating"," Bean_Type","Broad_Bean_Origin"
+"Length:1795       ","Length:1795       ","Min.   :   5  ","Min.   :2006  ","Min.   : 42.0  ","Length:1795       ","Min.   :1.000  ","Length:1795       ","Length:1795       "
+"Class :character  ","Class :character  ","1st Qu.: 576  ","1st Qu.:2010  ","1st Qu.: 70.0  ","Class :character  ","1st Qu.:2.875  ","Class :character  ","Class :character  "
+"Mode  :character  ","Mode  :character  ","Median :1069  ","Median :2013  ","Median : 70.0  ","Mode  :character  ","Median :3.250  ","Mode  :character  ","Mode  :character  "
+NA,NA,"Mean   :1036  ","Mean   :2012  ","Mean   : 71.7  ",NA,"Mean   :3.186  ",NA,NA
+NA,NA,"3rd Qu.:1502  ","3rd Qu.:2015  ","3rd Qu.: 75.0  ",NA,"3rd Qu.:3.500  ",NA,NA
+NA,NA,"Max.   :1952  ","Max.   :2017  ","Max.   :100.0  ",NA,"Max.   :5.000  ",NA,NA
