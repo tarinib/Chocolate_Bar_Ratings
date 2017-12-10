@@ -1,6 +1,7 @@
 #! /usr/bin/env Rscript 
 
 ## DATA VISUALIZATION
+## Author: Tarini Bhatnagar
 
 # This script takes tidy data (created in 1Clean.R), join_company_location and join_company_location (created in 1Analysis.R) as input, and produces and saves plots. 
 

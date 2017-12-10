@@ -57,13 +57,13 @@ Testing this hypothesis will include investigating the following questions:
 
 ## Analysis
 
-First, I perform some tidying tasks and write the data to a new .csv file [Clean.R](https://github.com/tarinib/Chocolate_Bar_Ratings/blob/master/src/Clean.R) . Data cleaning involves replacing spaces in attribute names with `_`, convert columns to correct data type, correcting country name acronyms among others. 
+First, I perform some tidying tasks and write the data to a new .csv file ([Clean.R](https://github.com/tarinib/Chocolate_Bar_Ratings/blob/master/src/Clean.R)) . Data cleaning involves replacing spaces in attribute names with `_`, convert columns to correct data type, correcting country name acronyms among others. 
 
-The cleaned data is then analyzed [Analysis.R](https://github.com/tarinib/Chocolate_Bar_Ratings/blob/master/src/Analysis.R) to produce statistical summary of all attributes. I also join dataframes with world map data using ISO country codes in order to plot the attributes on world map.
+The cleaned data is then analyzed ([Analysis.R](https://github.com/tarinib/Chocolate_Bar_Ratings/blob/master/src/Analysis.R)) to produce statistical summary of all attributes. I also join dataframes with world map data using ISO country codes in order to plot the attributes on world map.
 
-After analysis, I focus on data visualization [Plots.R](https://github.com/tarinib/Chocolate_Bar_Ratings/blob/master/src/Plots.R). Here, I create a boxplot of chocolate ratings which informs us about its ditribution, median, range etc. The second plot takes a look at the relationship between chocolate rating and cocoa bean percentage. The last two plots visualize the distribution of origin of beans (and their average rating) and company locations of highest rated chocolates on a world map. By highest rating I mean a rating of 4 or 5, which places the chocolate in 'elite' or 'premium' category. Color coding the above plots might help in identifying the regions producing the highest rated chocolates (both according to origin of beans and company location).
+After analysis, I focus on data visualization ([Plots.R](https://github.com/tarinib/Chocolate_Bar_Ratings/blob/master/src/Plots.R)). Here, I create a boxplot of chocolate ratings which informs us about its ditribution, median, range etc. The second plot takes a look at the relationship between chocolate rating and cocoa bean percentage. The last two plots visualize the distribution of origin of beans (and their average rating) and company locations of highest rated chocolates on a world map. By highest rating I mean a rating of 4 or 5, which places the chocolate in 'elite' or 'premium' category. Color coding the above plots might help in identifying the regions producing the highest rated chocolates (both according to origin of beans and company location).
 
-Lastly, a report is produced summarizing all my findings and my interpretation [Creat_Report.Rmd](https://github.com/tarinib/Chocolate_Bar_Ratings/blob/master/src/Create_Report.Rmd).
+Lastly, a report is produced summarizing all my findings and my interpretation ([Creat_Report.Rmd](https://github.com/tarinib/Chocolate_Bar_Ratings/blob/master/src/Create_Report.Rmd)).
 ## Usage
 
 To run this analysis, clone this repository, navigate to the project's root directory and type the following (in the same order):

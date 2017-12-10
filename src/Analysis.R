@@ -1,6 +1,7 @@
 #! /usr/bin/env Rscript 
 
 ## DATA ANALYSIS
+## Author: Tarini Bhatnagar
 
 # This script takes tidy data (created in 1Clean.R) as input, performs some analysis and writes the data to new output .csv files. 
 

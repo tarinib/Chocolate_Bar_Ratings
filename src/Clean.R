@@ -1,6 +1,7 @@
 #! /usr/bin/env Rscript 
 
 ## CLEANING DATA
+## Author: Tarini Bhatnagar
 
 # This script takes raw data as input, performs some tidying tasks and writes the data to a new output .csv file. 
 
