@@ -3,7 +3,7 @@
 
 Author: **TARINI BHATNAGAR**
 
-Date created: November 30th, 2017
+Date created: December 9th, 2017
 
 
 ## Overview
@@ -51,18 +51,53 @@ Testing this hypothesis will include investigating the following questions:
 
 * Is there a relationship between Cocoa percentage and Rating of chocolates?
 * Which region produces the highest rated chocolates?
-* Does Bean type effect Rating of chocolates?
+* Summary of Ratings
 * Where are the beans of highest rated chocolate bars grown?
 
-## Suggested analysis
 
-I will begin by plotting a worldmap visualizing the distribution of origin of beans. According to flavor ratings, a rating of 4 or 5 places the chocolate in 'elite' or 'premium' category. Hence, color coding the above scatter plot might help in identifying the regions producing the highets rated chocolates.
+## Analysis
 
-The relationship between Cocoa percentage and Rating of chocolates can be explored through correlation function and fitting a line through the data points. 
+First, I perform some tidying tasks and write the data to a new .csv file [Clean.R](https://github.com/tarinib/Chocolate_Bar_Ratings/blob/master/src/Clean.R) . Data cleaning involves replacing spaces in attribute names with `_`, convert columns to correct data type, correcting country name acronyms among others. 
 
-Visualizing the types of beans, rating of chocolates using box plots, jitter plots among others with varied aesthetics can narrow down regions producing the best quality chocolates.
+The cleaned data is then analyzed [Analysis.R](https://github.com/tarinib/Chocolate_Bar_Ratings/blob/master/src/Analysis.R) to produce statistical summary of all attributes. I also join dataframes with world map data using ISO country codes in order to plot the attributes on world map.
 
-I will also look at review date and chocolate ratings to see how ratings have varied over time.
+After analysis, I focus on data visualization [Plots.R](https://github.com/tarinib/Chocolate_Bar_Ratings/blob/master/src/Plots.R). Here, I create a boxplot of chocolate ratings which informs us about its ditribution, median, range etc. The second plot takes a look at the relationship between chocolate rating and cocoa bean percentage. The last two plots visualize the distribution of origin of beans (and their average rating) and company locations of highest rated chocolates on a world map. By highest rating I mean a rating of 4 or 5, which places the chocolate in 'elite' or 'premium' category. Color coding the above plots might help in identifying the regions producing the highest rated chocolates (both according to origin of beans and company location).
+
+Lastly, a report is produced summarizing all my findings and my interpretation [Creat_Report.Rmd](https://github.com/tarinib/Chocolate_Bar_Ratings/blob/master/src/Create_Report.Rmd).
+## Usage
+
+To run this analysis, clone this repository, navigate to the project's root directory and type the following (in the same order):
+
+```
+Rscript src/Clean.R https://raw.githubusercontent.com/tarinib/Chocolate_Bar_Ratings/master/data/flavors_of_cacao.csv results/tidy_choc_data.csv
+```
+This command runs src/Clean.R taking raw data file (in data folder) as input and creates a tidy version in results folder.
+
+```
+Rscript src/Analysis.R results/tidy_choc_data.csv results/stat_summary.csv results/join_company_location.csv results/join_bean_origin.csv
+```
+This command runs src/Analysis.R taking tidy data file as input and creates a data summary .csv, and 2 separate .csv joining the data with world map data in results folder.
+
+```
+Rscript src/Plots.R results/tidy_choc_data.csv results/join_company_location.csv results/join_bean_origin.csv
+```
+This command runs src/Plots.R taking the tidy data and joint dataframes as input and creates 4 plots in results/figures folder.
+
+```
+Rscript -e 'ezknitr::ezknit("src/Report.Rmd", out_dir = "results")'
+```
+This command runs src/Create_Report.Rmd taking the data summary and 4 plots as input and produces a rendered .md file in results folder containing the plots and their interpretation.  
+
+NOTE: You can change the name of output files in the above queries starting from first command, but make sure to use the same names as input in the following commands.
+
+## Dependency graph
+![](Dependency_Diagram.png)
+
+## Project dependencies
+
+* R
+* RStudio
+* R packages: ```colorRamps```,  ```countrycode```,  ```knitr```, ```maps```, ```RColorBrewer```, ```tidyverse```
 
 ## Acknowledgement
 
