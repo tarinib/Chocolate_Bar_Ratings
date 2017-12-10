@@ -84,7 +84,7 @@ Rscript src/Plots.R results/tidy_choc_data.csv results/join_company_location.csv
 This command runs src/Plots.R taking the tidy data and joint dataframes as input and creates 4 plots in results/figures folder.
 
 ```
-Rscript -e 'ezknitr::ezknit("src/Report.Rmd", out_dir = "doc")'
+Rscript -e 'ezknitr::ezknit("src/Create_Report.Rmd", out_dir = "doc")'
 ```
 This command runs src/Create_Report.Rmd taking the data summary and 4 plots as input and produces a rendered .md file in doc folder containing the plots and their interpretation.  
 
