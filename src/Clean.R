@@ -2,6 +2,7 @@
 
 ## CLEANING DATA
 ## Author: Tarini Bhatnagar
+## date: "12/5/2017"
 
 # This script takes raw data as input, performs some tidying tasks and writes the data to a new output .csv file. 
 

@@ -2,6 +2,7 @@
 
 ## DATA ANALYSIS
 ## Author: Tarini Bhatnagar
+## date: "12/6/2017"
 
 # This script takes tidy data (created in 1Clean.R) as input, performs some analysis and writes the data to new output .csv files. 
 

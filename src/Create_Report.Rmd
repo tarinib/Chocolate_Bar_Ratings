@@ -58,3 +58,6 @@ Here, we can see the distribution of company locations producing the best qualit
 ![](../results/figures/world_bean_origin.png)
 
 This map shows distribution of cocoa bean origin and the average rating of chocolates from that region. It is no surprise that the cocoa beans of highest rated chocolate originated in Central and South Ammerica, including Tobago, Mexico, Ecuador, Venezuela, Brazil among others, with an average rating of 3.6/5. Cocoa originated in Central America over 5000 years ago, and benefits from good soil and climate, mineral-rich volcanic soil and tropical equatorial climate. Even West Africa has become a major play in this field producing ~3 rated chocolate beans. India, Australia and many south east Asian countries seem to popular cocoa producing nations.
+
+One of my objectives was to test the hypothesis that the best rated chocolates have the highest percentage of Cocoa and come mainly from Central and South America.
+Analyzing the plots above, I think that although the best rated chocolate come from Central and South America, we cannot conclude that the best rated chocolates have the highest percentage of Cocooa. Instead, we could observe the rating goes down with increasing percentage of Cocoa. But, this is dependent on an individual's pallette and liking since high cocoa content makes the chocolate quite bitter.
