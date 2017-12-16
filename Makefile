@@ -31,3 +31,5 @@ clean:
 		rm -f results/figures/rating_cocoa_scatter.png
 		rm -f results/figures/world_comp_loc.png
 		rm -f results/figures/world_bean_origin.png
+		rm -f doc/Create_Report.html
+		rm -f doc/Create_Report.md
