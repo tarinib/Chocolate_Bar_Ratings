@@ -90,8 +90,12 @@ This command runs src/Create_Report.Rmd taking the data summary and 4 plots as i
 
 NOTE: You can change the name of output files in the above queries starting from first command, but make sure to use the same names as input in the following commands.
 
-## Dependency graph
+## Pipeline graph
 ![](Dependency_Diagram.png)
+
+## Dependency graph (from makefile2graph)
+<img src="Makefile.png" alt="Drawing" style="height: 500px;width: 900px"/>
+
 
 ## Project dependencies
 
