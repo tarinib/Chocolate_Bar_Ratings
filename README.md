@@ -94,7 +94,7 @@ NOTE: You can change the name of output files in the above queries starting from
 ![](Dependency_Diagram.png)
 
 ## Dependency graph (from makefile2graph)
-<img src="Makefile.png" alt="Drawing" style="height: 500px;width: 900px"/>
+<img src="Makefile.png" alt="Drawing" style="height: 800px;width: 900px"/>
 
 
 ## Project dependencies
