@@ -2,7 +2,9 @@
 date: "12/8/2017"
 author: "Tarini Bhatnagar"
 output: github_document
+
 ---
+
 
 
 ## Chocolate Bar Ratings
