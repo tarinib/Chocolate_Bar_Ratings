@@ -156,39 +156,28 @@ This analysis can be reproduced in 3 ways:
 * Open it in RStudio by clicking on the ```Chocolate_Bar_Ratings.Rproj``` file.
 
 * Type the following commands in shell(in the same order):
- 
-	This command runs src/Clean.R taking raw data file (in data folder) as input and creates a tidy version in results folder.
 
-	```
-	Rscript src/Clean.R https://raw.githubusercontent.com/tarinib/Chocolate_Bar_Ratings/master/data/flavors_of_cacao.csv results/tidy_choc_data.csv
-	```
-	
-	This command runs src/Analysis.R taking tidy data file as input and creates a data summary .csv, and 2 separate .csv joining the data with world map data in results folder.
-
-	```
-	Rscript src/Analysis.R results/tidy_choc_data.csv results/stat_summary.csv results/join_company_location.csv results/join_bean_origin.csv
-	```
-
-	This command runs src/Plots.R taking the tidy data and joint dataframes as input and creates 4 plots in results/figures folder.
+* Clean previous output files.
 	
 	```
-	Rscript src/Plots.R results/tidy_choc_data.csv results/join_company_location.csv results/join_bean_origin.csv
+	make clean
 	```
-
-	This command runs src/Create_Report.Rmd taking the data summary and 4 plots as input and produces a rendered .md file in doc folder containing the plots and their interpretation. 
 	
-	```
-	Rscript -e 'ezknitr::ezknit("src/Create_Report.Rmd", out_dir = "doc")'
-	```
- 
-*NOTE: You can change the name of output files in the above queries starting from first command, but make sure to use the same names as input in the following commands.*
+* Run makefile to reproduce analysis.
 
+	```
+	make all
+	```
+
+	
 
 ## Project dependencies
 
 * R
 * RStudio
-* R packages: ```colorRamps```,  ```countrycode```,   ```ezknitr```, ```knitr```, ```maps```, ```RColorBrewer```, ```tidyverse```
+* R packages: ```colorRamps```,  ```countrycode```,   ```ezknitr```, ```knitr```, ```maps```, ```packrat```,  ```RColorBrewer```, ```tidyverse```
+* Make (to run makefile)
+* Docker (If you are using this approach)
 
 ## Acknowledgement
 
