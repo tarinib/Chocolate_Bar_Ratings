@@ -64,37 +64,126 @@ The cleaned data is then analyzed ([Analysis.R](https://github.com/tarinib/Choco
 After analysis, I focus on data visualization ([Plots.R](https://github.com/tarinib/Chocolate_Bar_Ratings/blob/master/src/Plots.R)). Here, I create a boxplot of chocolate ratings which informs us about its ditribution, median, range etc. The second plot takes a look at the relationship between chocolate rating and cocoa bean percentage. The last two plots visualize the distribution of origin of beans (and their average rating) and company locations of highest rated chocolates on a world map. By highest rating I mean a rating of 4 or 5, which places the chocolate in 'elite' or 'premium' category. Color coding the above plots might help in identifying the regions producing the highest rated chocolates (both according to origin of beans and company location).
 
 Lastly, a report is produced summarizing all my findings and my interpretation about the hypothesis ([Creat_Report.Rmd](https://github.com/tarinib/Chocolate_Bar_Ratings/blob/master/src/Create_Report.Rmd)).
+
 ## Usage
 
-To run this analysis, clone this repository, navigate to the project's root directory and type the following (in the same order):
+This analysis can be reproduced in 3 ways:
 
-```
-Rscript src/Clean.R https://raw.githubusercontent.com/tarinib/Chocolate_Bar_Ratings/master/data/flavors_of_cacao.csv results/tidy_choc_data.csv
-```
-This command runs src/Clean.R taking raw data file (in data folder) as input and creates a tidy version in results folder.
+### Makefile 
+##### Project dependencies listed at the end of this page need to be met for this approach to run successfully.
 
-```
-Rscript src/Analysis.R results/tidy_choc_data.csv results/stat_summary.csv results/join_company_location.csv results/join_bean_origin.csv
-```
-This command runs src/Analysis.R taking tidy data file as input and creates a data summary .csv, and 2 separate .csv joining the data with world map data in results folder.
+* Clone this repository:
 
-```
-Rscript src/Plots.R results/tidy_choc_data.csv results/join_company_location.csv results/join_bean_origin.csv
-```
-This command runs src/Plots.R taking the tidy data and joint dataframes as input and creates 4 plots in results/figures folder.
+	```
+	git clone https://github.com/tarinib/Chocolate_Bar_Ratings.git
+	```
 
-```
-Rscript -e 'ezknitr::ezknit("src/Create_Report.Rmd", out_dir = "doc")'
-```
-This command runs src/Create_Report.Rmd taking the data summary and 4 plots as input and produces a rendered .md file in doc folder containing the plots and their interpretation.  
+* Navigate to the repository on your local machine and delete previous output files.
 
-NOTE: You can change the name of output files in the above queries starting from first command, but make sure to use the same names as input in the following commands.
+	```
+	make clean
+	```
+	
+*  Reproduce analysis.
 
-## Pipeline graph
+	```
+	make all
+	```
+
+
+*I recommend running make clean first and then reproduce analysis using make all.*
+
+#### Pipeline graph
 ![](Dependency_Diagram.png)
 
-## Dependency graph (from makefile2graph)
+#### Dependency graph (from makefile2graph)
 <img src="Makefile.png" alt="Drawing" style="height: 800px;width: 900px"/>
+
+
+### Dockerfile
+
+* Clone this repository:
+
+	```
+	git clone https://github.com/tarinib/Chocolate_Bar_Ratings.git
+	```
+
+* Use launchpad/Finder/Start menu/etc to find and launch Docker.
+* Open command line (terminal/GitBash) and type:
+
+	```
+	docker pull tarini24/chocolate_bar_ratings
+	```
+
+* Verify that it successfully pulled by typeing: docker images, you should see something like:
+
+	```
+	REPOSITORY                           TAG                 IMAGE ID            CREATED             SIZE
+	tarini24/chocolate_bar_ratings       latest              af41344062df        6 hours ago         1.84 GB
+	```
+
+* Run the Docker image and link it to your local version of the repository:
+
+	```
+	docker run -it --rm -v local_directory_of_this_repo:/Chocolate_Bar_Ratings tarini24/chocolate_bar_ratings /bin/bash
+	```
+
+* From the root in the Docker container go to the project folder. 
+
+	```
+	cd Chocolate_Bar_Ratings
+	```
+	
+* Clean previous output files.
+	
+	```
+	make clean
+	```
+	
+* Run make file to reproduce analysis.
+
+	```
+	make all
+	```
+
+### Packrat
+##### This approach enables you to reproduce analysis without having all project dependencies.
+
+* Clone this repository:
+
+	```
+	git clone https://github.com/tarinib/Chocolate_Bar_Ratings.git
+	```
+	
+* Open it in RStudio by clicking on the ```Chocolate_Bar_Ratings.Rproj``` file.
+
+* Type the following (in the same order):
+ 
+	This command runs src/Clean.R taking raw data file (in data folder) as input and creates a tidy version in results folder.
+
+	```
+	Rscript src/Clean.R https://raw.githubusercontent.com/tarinib/Chocolate_Bar_Ratings/master/data/flavors_of_cacao.csv results/tidy_choc_data.csv
+	```
+	
+	This command runs src/Analysis.R taking tidy data file as input and creates a data summary .csv, and 2 separate .csv joining the data with world map data in results folder.
+
+	```
+	Rscript src/Analysis.R results/tidy_choc_data.csv results/stat_summary.csv results/join_company_location.csv results/join_bean_origin.csv
+	```
+
+	This command runs src/Plots.R taking the tidy data and joint dataframes as input and creates 4 plots in results/figures folder.
+	
+	```
+	Rscript src/Plots.R results/tidy_choc_data.csv results/join_company_location.csv results/join_bean_origin.csv
+	```
+
+	This command runs src/Create_Report.Rmd taking the data summary and 4 plots as input and produces a rendered .md file in doc folder containing the plots and their interpretation. 
+	
+	```
+	Rscript -e 'ezknitr::ezknit("src/Create_Report.Rmd", out_dir = "doc")'
+	```
+ 
+*NOTE: You can change the name of output files in the above queries starting from first command, but make sure to use the same names as input in the following commands.*
 
 
 ## Project dependencies
