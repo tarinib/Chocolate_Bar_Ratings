@@ -101,7 +101,7 @@ NOTE: You can change the name of output files in the above queries starting from
 
 * R
 * RStudio
-* R packages: ```colorRamps```,  ```countrycode```,  ```knitr```, ```maps```, ```RColorBrewer```, ```tidyverse```
+* R packages: ```colorRamps```,  ```countrycode```,   ```ezknitr```, ```knitr```, ```maps```, ```RColorBrewer```, ```tidyverse```
 
 ## Acknowledgement
 
