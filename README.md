@@ -90,17 +90,15 @@ This analysis can be reproduced in 3 ways:
 	make all
 	```
 
-
-*I recommend running make clean first and then reproduce analysis using make all.*
-
-#### Pipeline graph
+#### Pipeline graph for makefile
 ![](Dependency_Diagram.png)
 
-#### Dependency graph (from makefile2graph)
+#### Dependency graph for makefile (from makefile2graph)
 <img src="Makefile.png" alt="Drawing" style="height: 800px;width: 900px"/>
 
 
 ### Dockerfile
+##### This approach enables you to reproduce analysis without having any project dependencies.
 
 * Clone this repository:
 
@@ -140,14 +138,14 @@ This analysis can be reproduced in 3 ways:
 	make clean
 	```
 	
-* Run make file to reproduce analysis.
+* Run makefile to reproduce analysis.
 
 	```
 	make all
 	```
 
 ### Packrat
-##### This approach enables you to reproduce analysis without having all project dependencies.
+##### This approach enables you to reproduce analysis without having any project dependencies.
 
 * Clone this repository:
 
@@ -157,7 +155,7 @@ This analysis can be reproduced in 3 ways:
 	
 * Open it in RStudio by clicking on the ```Chocolate_Bar_Ratings.Rproj``` file.
 
-* Type the following (in the same order):
+* Type the following commands in shell(in the same order):
  
 	This command runs src/Clean.R taking raw data file (in data folder) as input and creates a tidy version in results folder.
 
